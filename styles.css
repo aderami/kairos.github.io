@@ -1,6 +1,3 @@
-body {
-    overflow-x: hidden;
-}
 
 .grid {
     display: grid;
@@ -20,40 +17,44 @@ a {
 }
 
 li {list-style: none}
+
+video {
+    position: relative;
+}
 /*----------------------------------------------*/
 
 
+/*------------ANIMATION LOADING--------------------*/
 .volet {
     background: transparent;
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100vh;
-    width: 100vw;
+    height: auto;
+    grid-column: 1/3;
+    grid-row: 1;
     display: grid;
     grid-template-columns: 1fr 3fr;
-    z-index: 2;
+    z-index: 20;
 }
 
 .volet div {
     position: relative;
+    width: auto;
     height: 100%;
     background: blue;
 }
 
 span {
-    z-index: 3;
+    z-index: 21;
     position: absolute;
     font-family: 'Space Grotesk';
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
 }
+/*----------------------------------------------*/
 
 
 /*------------HEADER SECTION---------------------*/
 header {
-    box-sizing: border-box;
     display: grid;
     grid-template-rows: 2fr 2fr 1fr ;
     font-family: 'Space Grotesk';
@@ -64,7 +65,6 @@ header {
     height: 100vh;
 }
 
-header > * {box-sizing: border-box;}
 .ul-header {margin: 0 0 0 32px}
 .subcontainer-header {
     display: flex;
@@ -90,15 +90,16 @@ header .partenaires li {display: inline}
 h6 {font-size: 14px}
 
 /*----------------------------------------------*/
+
+
 /*------------MAIN SECTION---------------------*/
-
-
 main {
-    background: url("main.jpg") no-repeat top center;
     background-size: cover;
     grid-column: 2/3;
     font-family: 'Space Grotesk';
     color: #fff;
+    height: 100vh;
+    grid-row: 1;
 }
 
 main section {
@@ -106,11 +107,21 @@ main section {
 
 }
 
-main .general {
+section.details {
+    box-sizing: border-box;
     height: 100vh;
+    color: blue;
+    padding: 240px 120px 0;
+}
+
+main .general {
+    background: url("../img/drone-view.jpg") bottom left;
+    height: 100vh;
+    background-size: cover;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    color: white;
 }
 
 .general div {
@@ -119,7 +130,7 @@ main .general {
     flex-direction: column;
 }
 
-.right-part {align-items: flex-end;}
+.general .right-part {align-items: flex-end;}
 
 .general h1 {
     font-weight: 900;
@@ -142,20 +153,32 @@ main .general {
     color: blue;
     height: 56px;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: space-between;
     font-weight: 600;
     border-radius: 5px;
     font-size: calc(14px + 0.2vw);
     letter-spacing: calc(-2px + 0.1vw);
+    transition: 1s;
 }
 
-section.details {
-    box-sizing: border-box;
-    background: #fff;
-    height: 100vh;
-    color: blue;
-    padding: 240px 120px 0;
+.right-part li:hover {
+    align-items: flex-start;
+    height: 180px;
+    transition: 1s;
+}
+/*----------------------------------------------*/
+
+
+/*------------MAIN SECTION DETAIL---------------------*/
+.details video.drone {
+    top: 20%;
+    left: 25%;
+}
+
+.details video.coursier {
+    left: 0;
+    top: 75%;
 }
 
 .details .title h1 {
@@ -181,13 +204,182 @@ section.details {
     font-weight: 700;
     width: 50%;
 }
+/*------------------------------------------------------*/
+
+
+
+/*------------MAIN SECTION DETAIL_2---------------------*/
+section.details_2 {
+    box-sizing: border-box;
+    padding: 240px 100px 0 220px;
+}
+
+section.details_2 .text {width: 92%}
 
 section.details_2 h3 {
     float: right;
 }
 
+section.details_2 .couple {
+    top: 78%;
+}
 
-@media screen and (max-width: 1560px) {
+section.details_2 .groupe {
+    top: 20%;
+    left: 35%;
+}
+
+/*------------ANIMATION DOTS---------------------*/
+.zone {
+ width: 300px;
+ height: 300px;
+ position: absolute;
+ left: 65%;
+ display: flex;
+ flex-wrap: wrap;
+ padding: 30px;
+ transform: rotateZ(15deg);
+}
+.pulse {
+    width: 15px;
+    margin: 15px;
+    height: 15px;
+    background: blue;
+    border-radius: 100%;
+    border: 1px solid blue;
+    top: calc(50%);
+    left: calc(50%);
+    opacity: 0;
+    animation: blip2 2s infinite;
+    animation-delay: calc(var(--animation-order) * 100ms)
+}
+.pulse:before {
+    content: "";
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background-color: blue;
+    border-radius: 100%;
+}
+.pulse:before {
+  animation: blip1 2s infinite;
+  animation-delay: calc(var(--animation-order) * 200ms)
+}
+
+@keyframes blip1 {
+    to {
+        transform: scale(2.5);
+        opacity: 0;
+   }
+}
+@keyframes blip2 {
+    to {
+        opacity: 1;
+   }
+}
+/*-------------------------------------------------*/
+/*-----------------------------------------------*/
+
+
+
+/*------------ANIMATION CHARTS---------------------*/
+
+.detail_3 .chart{
+    position: relative;
+}
+
+div.chart {
+	width: 500px;
+	height: 200px;
+	position: relative;
+    top: 66%;
+    left: 0;
+	box-sizing: border-box;
+	display: flex;
+	padding: 0 250px 0 0;
+    align-items: flex-end;
+    justify-content: flex-start;
+}
+
+.chart div {
+    border-radius: 5px 5px 0 0;
+	box-sizing: border-box;
+	width: 30%;
+	height: calc(var(--size-factor) * 50%);
+	background: #fff;
+	animation: change 1.5s infinite;
+    animation-delay: calc(var(--animation-order) * 100ms);
+    background: rgba(0, 0, 255, 1);
+	animation-direction: alternate-reverse;
+}
+
+@keyframes change {
+    to {
+        height: calc(var(--size-factor) * 100%);
+        background: rgba(0, 0, 255, 0.8);
+    }
+}
+
+.chart div:not(:first-child) {
+	margin-left: 7px
+}
+/*-----------------------------------------------*/
+
+/*------------FOOTER-----------------------------*/
+.footer {
+    height: 100vh;
+    background: blue;
+    color: #fff;
+    display: flex;
+    padding-top: 240px;
+}
+
+.footer h2 {
+    font-size: calc(24px + 1vw);
+}
+
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 50%;
+}
+
+form input {
+    width: 50%;
+    background: #fff;
+}
+
+input[type=text], input[type='tel'], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 1px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  
+  input[type=submit] {
+    width: 100%;
+    background-color: #000;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  input[type=submit]:hover {
+    background-color: #fff;
+    color: #000;
+  }
+
+
+
+  @media screen and (max-width: 1900px) {
     .collab-list {
         flex-direction: column
     }
@@ -197,4 +389,15 @@ section.details_2 h3 {
     .subcontainer-header ul {
         margin: 20px 0 0 0;
     }
+
+    .volet {
+        grid-template-columns: 1fr;
+    }
+    .volet div {height: 100vh}
+    .temp {display: none}
+    header {display: none}
+    main {grid-column: 1/3}
+    main section {padding: 100px}
+    section.details {padding: 100px}
+    .couple {top: 50%}
 }
