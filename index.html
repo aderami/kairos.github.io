@@ -1,16 +1,14 @@
 <!doctype html>
-
 <html lang="fr">
     <head>
         <meta charset="utf-8">
         <title>Kairos</title>
         <meta name="description" content="Kairos">
-        <meta name="Belgadel">
+        <meta name="Johachim X Quentin">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
-        <link rel="stylesheet" href="normalize.css">
-        <link rel="preconnect" href="https://fonts.gstatic.com">
-        <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet"> 
-        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/styles.css">
+        <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     </head>
     <body>
         <span>
@@ -34,41 +32,41 @@
                 transform="translate(-4.76 52.408)" fill="none" stroke="#fff" stroke-width="1"/>
               </svg>              
         </span>
-        <div class="volet">
-            <div></div>
-            <div></div>
-        </div>
         <div class="grid">
+            <div class="volet">
+                <div></div>
+                <div class="temp"></div>
+            </div>
             <header>
                 <nav class="subcontainer-header">
                     <h6 class="logo">KAIROS</h6>
                     <ul class="ul-header">
-                        <li><a href="#">À propos</a></li>
+                        <li><a href="#">Qui somme nous ?</a></li>
                         <li><a href="#">Notre mission</a></li>
-                        <li><a href="#">Notre flotte</a></li>
+                        <li><a href="#">Discutons !</a></li>
                     </ul>
                 </nav>
                 <div class="partenaires subcontainer-header">
                     <h6>Nos partenaires</h6>
                     <ul class="collab-list ul-header">
                         <li>
-                            <img src="amazon-2.svg"
+                            <img src="svg/amazon-2.svg"
                              alt="amazon logo" width="60px"/>
                         </li>
                         <li>
-                            <img src="deliveroo-logo.svg"
+                            <img src="svg/deliveroo-logo.svg"
                              alt="deliveroo logo" width="60px"/>
                         </li>
                         <li>
-                            <img src="just-eat.svg"
+                            <img src="svg/just-eat.svg"
                              alt="justeat logo" width="60px"/>
                         </li>
                         <li>
-                            <img src="uber-eats.svg"
+                            <img src="svg/uber-eats.svg"
                              alt="uber logo" width="60px"/>
                         </li>
                         <li>
-                            <img src="burger-king-logo.svg"
+                            <img src="svg/burger-king-logo.svg"
                              alt="bk logo" width="60px"/>
                         </li>
                     </ul>
@@ -83,7 +81,6 @@
                 </div>
             </header>
             <main>
-                <div class="darken"></div>
                 <section class="general">
                     <div class="left-part">
                         <h1>
@@ -129,18 +126,24 @@
                     </div>
                 </section>
                 <section class="details">
-                    <div class="title">
+                    <video class="coursier" width="300px" autoplay loop muted data-aos="fade-up">
+                        <source src="img/production ID_4605206.mp4" type="video/mp4"> 
+                    </video>
+                    <video class="drone" width="300px" autoplay loop muted data-aos="fade-up">
+                        <source src="img/drone-city.mp4" type="video/mp4"> 
+                    </video>
+                    <div class="title" data-aos="fade-up">
                         <h1>
                             KAIROS AU SERVICE<br>DES RESTAURATEURS
                         </h1>
                     </div>
-                    <div class="text">
-                        <h3>Plus de perspective<br>et de flexibilité</h3>
+                    <div class="text" data-aos="fade-up">
+                        <h3>Pour plus de perspective<br>et une plus grande flexibilité</h3>
                         <p>
-                            KAIROS fournit à ses partenaires un service de livraison
+                            Nous fournissons à nos partenaires un service de livraison
                             innovant alliant un champ d'action aérien et terrestre,
-                            en effet nous sommes la première société de livraison
-                            à opérer par les airs. 
+                            nous sommes la première société de livraison
+                            à opérer par les airs.<br>
                             Avec l'aide de l'état nous avons mis en place un
                             système de navigation aérien, grâce auquel nos livreurs,
                             agrées par l'état et formé par nos soins, peuvent accomplir
@@ -149,28 +152,103 @@
                     </div>
                 </section>
                 <section class="details details_2">
+                    <video class="couple" width="300px" autoplay loop muted data-aos="fade-up">
+                        <source src="img/couple.mp4" type="video/mp4"> 
+                    </video>
+                    <video class="groupe" width="300px" autoplay loop muted data-aos="fade-up">
+                        <source src="img/groupe.mp4" type="video/mp4"> 
+                    </video>
                     <div class="title">
-                        <h1>
+                        <h1 data-aos="fade-up">
                             FAITES PLUS D'HEUREUX<br>ET FIDELISEZ
                             VOS CLIENTS             
                         </h1>
                     </div>
-                    <div class="text">
-                        <h3>En doublant votre périmètre<br>de livraison
+                    <div class="text" data-aos="fade-up">
+                        <h3>En doublant votre périmètre de livraison<br>
                         et en reduisant le temps<br>d'attente de vos plats
                         </h3>
                         <p>
                             Grâce à sa flotte de coursier au sol et dans les airs
                             KAIROS vous permet de toucher deux fois plus de
                             clients avec un délai d'attente supérieur de seulement
-                            3min par rapport à la moyenne.   
+                            3mn par rapport à la moyenne.   
                         </p>
                     </div>
+                    <div class='zone delivery-zone clip-zone' data-aos="fade-up">
+                        <div class="pulse" style="--animation-order: 6;"></div>
+                        <div class="pulse" style="--animation-order: 3;"></div>
+                        <div class="pulse" style="--animation-order: 5;"></div>
+                        <div class="pulse" style="--animation-order: 2;"></div>
+                        <div class="pulse" style="--animation-order: 8;"></div>
+                        <div class="pulse" style="--animation-order: 7;"></div>
+                        <div class="pulse" style="--animation-order: 1;"></div>
+                        <div class="pulse" style="--animation-order: 12;"></div>
+                         <div class="pulse" style="--animation-order: 6;"></div>
+                        <div class="pulse" style="--animation-order: 3;"></div>
+                        <div class="pulse" style="--animation-order: 5;"></div>
+                        <div class="pulse" style="--animation-order: 8;"></div>
+                        <div class="pulse" style="--animation-order: 1;"></div>
+                        <div class="pulse" style="--animation-order: 12;"></div>
+                        <div class="pulse" style="--animation-order: 5;"></div>
+                        <div class="pulse" style="--animation-order: 2;"></div>
+                        <div class="pulse" style="--animation-order: 8;"></div>
+                        <div class="pulse" style="--animation-order: 7;"></div>
+                        <div class="pulse" style="--animation-order: 2;"></div>
+                        <div class="pulse" style="--animation-order: 20;"></div>
+                        <div class="pulse" style="--animation-order: 1;"></div>
+                        <div class="pulse" style="--animation-order: 6;"></div>
+                        <div class="pulse" style="--animation-order: 12;"></div>
+                         <div class="pulse" style="--animation-order: 15;"></div>
+                     </div>
+                </section>
+                <section class="details detail_3">
+                    <div class="chart" data-aos="fade-up">
+                        <div style='--size-factor: 0.8; --animation-order: 3'></div>
+                        <div style='--size-factor: 0.8; --animation-order: 5'></div>
+                        <div style='--size-factor: 0.8; --animation-order: 2'></div>
+                        <div style='--size-factor: 0.8; --animation-order: 7'></div>
+                        <div style='--size-factor: 0.8; --animation-order: 10'></div>
+                    </div>
+                    <div class="title" data-aos="fade-up">
+                        <h1>
+                            DES FRAIS DE COMMISSIONS<br>
+                            AVANTAGEUX
+                        </h1>
+                    </div>
+                    <div class="text" data-aos="fade-up">
+                        <h3>Economisez du temps<br>
+                            et de l'argent</h3>
+                        <p>
+                            Chez KAIROS nous garantissons des frais de 
+                            commissions inférieur à 30% et une hausse de
+                            vos recettes de 20%. 
+                        </p>
+                    </div>
+                </section>
+                <section class="footer">
+                    <h2>N'hésitez pas à nous contacter<br>pour plus d'informations</h2 data-aos="fade-up">
+                    <form action="#" data-aos="fade-up">
+                        <label for="fname">Prénom</label><br>
+                        <input type="text" id="fname" name="fname" placeholder="Quel beau prénom !"><br><br>
+                        <label for="lname">Nom</label><br>
+                        <input type="text" id="lname" name="lname" placeholder="Quel nom !"><br><br>
+                        <label for="tel">Numéro de téléphone</label><br>
+                        <input type="tel" id="lname" name="tel" value=""><br><br>
+                        <input type="submit" value="Submit">
+                    </form>
                 </section>
             </main>
         </div>
     </body>
-    <script src="main.js"></script>
+    <script src="JS/main.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js"></script>
-    <script src="https://animejs.com/lib/anime.min.js"></script>
+    <script src="JS/anime-master/lib/anime.min.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        duration: 1000,
+        once: true,
+      });
+    </script>
 </html>
